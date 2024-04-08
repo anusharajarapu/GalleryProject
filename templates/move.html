@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body{
+        background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Google-Photos_icon_logo_%28May-September_2015%29.png/1280px-Google-Photos_icon_logo_%28May-September_2015%29.png');
+        height: 100vh;
+        background-size: cover;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- <button class="btn  dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        albums
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        {% for i in items %}
+        <a class="dropdown-item" href="{{url_for('cb',album_name=i[0])}}">{{i[0]}}</a>
+        {% endfor %}
+      </div> -->
+      
+
+      <form method="POST" action="{{url_for('move1',itemid=itemid)}}">
+        <center>
+                <select name="option">
+        {% for i in items %}
+        <option>{{i[0]}}</option>
+        {% endfor %}
+      </select>
+      <button>Submit</button>
+      </center>
+      </form>
+</body>
+</html>
